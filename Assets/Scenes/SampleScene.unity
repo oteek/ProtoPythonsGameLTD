@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 795861475}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: goalpost
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 1769847492}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: goalpost
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -1441,6 +1441,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3365949552914136600, guid: 096142bc74b309f4eaa0fae29779abef, type: 3}
   m_PrefabInstance: {fileID: 1986245210}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &2036872637 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6530468614434373984, guid: b1b925ba7cde2214dbeaa093d115ca79, type: 3}
+  m_PrefabInstance: {fileID: 6745962561743129085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6712578269554495453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1519,12 +1524,16 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5478157660434381336, guid: b1b925ba7cde2214dbeaa093d115ca79, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 2036872637}
+    - target: {fileID: 5478157660434381336, guid: b1b925ba7cde2214dbeaa093d115ca79, type: 3}
       propertyPath: kickUp
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5478157660434381336, guid: b1b925ba7cde2214dbeaa093d115ca79, type: 3}
       propertyPath: movSpeed
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 5478157660434381336, guid: b1b925ba7cde2214dbeaa093d115ca79, type: 3}
       propertyPath: kickForce
