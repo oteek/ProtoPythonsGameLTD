@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]       //gpt pasiulymo editorius neatvaizduoja tai jis pasiule sita inicijuot kad matytusi editoriuje ir lengvai galeciau idet ginklus
-public class WeaponArray
-{
+public class WeaponArray {
     public GameObject[] weapons;        //scuffed
 }
 
@@ -44,8 +43,7 @@ public class WeaponManager : MonoBehaviour {
     }
 
     void SwitchWeaponArray(int newIndex) {
-        if (newIndex >= 0 && newIndex < weaponArrays.Count)
-        {
+        if (newIndex >= 0 && newIndex < weaponArrays.Count) {
             curWeaponIndex = newIndex;
 
             // Retrieve and initialize the weapons from the current array
@@ -66,8 +64,7 @@ public class WeaponManager : MonoBehaviour {
         SwitchWeaponArray(newIndex);
     }
 
-    void SwitchWeapon(int weaponIndex)
-    {
+    void SwitchWeapon(int weaponIndex) {
         if (curWeapon != null && weaponIndex >= 0 && weaponIndex < curWeapon.Length) {
             Debug.Log("Switching to weapon " + weaponIndex);
         } else {

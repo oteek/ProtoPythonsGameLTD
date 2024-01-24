@@ -12,7 +12,6 @@ public class Movement : MonoBehaviour
 
     Vector3 direction;
     float horX, horY;
-    bool isGrounded;
     bool canJump = true;
     void Start()
     {
@@ -52,14 +51,6 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate() {
         rb.velocity = ((transform.forward * horY) + (transform.right * horX)) * movSpeed * Time.fixedDeltaTime + new Vector3 (0, rb.velocity.y, 0);
-        
-        bool test = Physics.Raycast(transform.position, Vector3.down, 50f, LayerMask.GetMask("Ground")); //neveikia
-
-        if (test) {
-            isGrounded = true;
-        } else {
-            isGrounded = false;
-        }
     }
     void Jump()
     {
