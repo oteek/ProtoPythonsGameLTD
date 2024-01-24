@@ -15,10 +15,8 @@ public class AgentMovement : MonoBehaviour
     }
     void Update()
     {
-        // Move towards the target position smoothly
         transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
 
-        // Check if it's time to change direction
         timer += Time.deltaTime;
         if (timer >= changeDirectionInterval)
         {
@@ -29,12 +27,12 @@ public class AgentMovement : MonoBehaviour
 
     void SetNewRandomTarget()
     {
-        // Generate new random target position within a range
-        float randomX = Random.Range(-1f, 1f);
-        float randomY = Random.Range(-1f, 1f);
+        float randomX = Random.Range(-3f, -4f);
+        float randomY = Random.Range(1f, 2f);
+        float randomZ = Random.Range(-19f, -20f);
         
 
-        targetPosition = new Vector3(randomX, randomY);
+        targetPosition = new Vector3(randomX, randomY, randomZ);
     }
     
 }
