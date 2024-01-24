@@ -12,7 +12,6 @@ public class PrefabGun : MonoBehaviour, IWeapon
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.velocity = gunTip.forward * bulletSpeed;
 
-        // Optionally, set a lifetime for the prefab object
         Destroy(bullet, 5f);
     }
 

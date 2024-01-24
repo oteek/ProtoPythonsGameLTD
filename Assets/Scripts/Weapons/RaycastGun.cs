@@ -10,7 +10,6 @@ public class RaycastGun : MonoBehaviour, IWeapon
     private AudioSource audioSource;
     void Start()
     {
-        // Initialize the AudioSource component
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -25,8 +24,8 @@ public class RaycastGun : MonoBehaviour, IWeapon
         RaycastHit hit;
 
         if (Physics.Raycast(gunTip.position, gunTip.forward, out hit, Mathf.Infinity, shootableLayer)) {
-            // Handle hitting an object (e.g., apply damage)
             Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
+            //sioje vietoje kai pataikom i priesa reik nuimt jiem hp
         }
 
         // Play the shooting sound

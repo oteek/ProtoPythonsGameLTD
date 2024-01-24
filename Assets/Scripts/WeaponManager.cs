@@ -16,7 +16,7 @@ public interface IWeapon {
 public class WeaponManager : MonoBehaviour {
     [Header("Weapon List")]
     public List<WeaponArray> weaponArrays = new List<WeaponArray>();        //gpt pasiule dviguba masyva cia kazkodel daryt
-    // manau galima buvo tiesiog public GameObject[] weaponArray daryt oh well
+    // manau galima buvo tiesiog public GameObject[] weaponArray daryt
 
     private int curWeaponIndex = 0;
     private IWeapon[] curWeapon;
