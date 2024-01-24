@@ -4,7 +4,7 @@ using UnityEngine;
 public class AgentMovement : MonoBehaviour
 {
     public float speed = 0.5f;
-    public float changeDirectionInterval = 0.5f;
+    public float changeDirectionInterval = 1f;
 
     private Vector3 targetPosition;
     private float timer;
@@ -27,9 +27,9 @@ public class AgentMovement : MonoBehaviour
 
     void SetNewRandomTarget()
     {
-        float randomX = Random.Range(-3f, -4f);
-        float randomY = Random.Range(1f, 2f);
-        float randomZ = Random.Range(-19f, -20f);
+        float randomX = Random.Range(-3f, -6f);
+        float randomY = Random.Range(1f, 3f);
+        float randomZ = Random.Range(-19f, -21f);
         
 
         targetPosition = new Vector3(randomX, randomY, randomZ);
