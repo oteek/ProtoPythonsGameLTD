@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
     void FixedUpdate() {
         rb.velocity = ((transform.forward * horY) + (transform.right * horX)) * movSpeed * Time.fixedDeltaTime + new Vector3 (0, rb.velocity.y, 0);
         
-        bool test = Physics.Raycast(transform.position, Vector3.down, 50f, LayerMask.GetMask("Ground"));
+        bool test = Physics.Raycast(transform.position, Vector3.down, 50f, LayerMask.GetMask("Ground")); //neveikia
 
         if (test) {
             isGrounded = true;
@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour
     {
         if (canJump) {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            StartCoroutine(JumpCooldown());
+            StartCoroutine(JumpCooldown());         //1 sekundes cooldown koroutina
         }
     }
     IEnumerator JumpCooldown()

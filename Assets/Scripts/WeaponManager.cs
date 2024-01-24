@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+[System.Serializable]       //gpt pasiulymo editorius neatvaizduoja tai jis pasiule sita inicijuot kad matytusi editoriuje ir lengvai galeciau idet ginklus
 public class WeaponArray
 {
-    public GameObject[] weapons;
+    public GameObject[] weapons;        //scuffed
 }
 
 public interface IWeapon {
@@ -15,7 +15,8 @@ public interface IWeapon {
 
 public class WeaponManager : MonoBehaviour {
     [Header("Weapon List")]
-    public List<WeaponArray> weaponArrays = new List<WeaponArray>();
+    public List<WeaponArray> weaponArrays = new List<WeaponArray>();        //gpt pasiule dviguba masyva cia kazkodel daryt
+    // manau galima buvo tiesiog public GameObject[] weaponArray daryt oh well
 
     private int curWeaponIndex = 0;
     private IWeapon[] curWeapon;
@@ -30,12 +31,10 @@ public class WeaponManager : MonoBehaviour {
     }
 
     void Update() {
-        // Cycle between assigned weapon arrays (you can customize the key or use a different method)
         if (Input.GetKeyDown(KeyCode.Tab)) {
             CycleWeaponArrays();
         }
 
-        // Shoot using the current weapons
         if (Input.GetButtonDown("Fire1") && curWeapon != null) {
             foreach (var weapon in curWeapon)
             {
