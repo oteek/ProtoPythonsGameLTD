@@ -25,7 +25,9 @@ public class RaycastGun : MonoBehaviour, IWeapon
 
         if (Physics.Raycast(gunTip.position, gunTip.forward, out hit, Mathf.Infinity, shootableLayer)) {
             Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
-            //sioje vietoje kai pataikom i priesa reik nuimt jiem hp
+            if (hit.collider.gameObject.tag == "Enemy") {
+                Destroy(hit.collider.gameObject);       //laikinas kodas
+            }
         }
 
         // Play the shooting sound

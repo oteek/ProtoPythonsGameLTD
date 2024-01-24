@@ -37,7 +37,6 @@ public class Movement : MonoBehaviour
         if(Input.GetButton("Jump")) {
             Jump();
         }
-        //Debug.Log(isGrounded);
     }
 
     void HandleMouseMovement() {    // peles judejimas
