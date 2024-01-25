@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -64,4 +65,15 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(jumpCooldown);
         canJump = true;
     }
+
+    internal void TakeDamage(int damage)
+    {
+        throw new NotImplementedException();
+    }
+
+    public class movement : MonoBehaviour
+{
+    public int health = 100;
+
+}
 }

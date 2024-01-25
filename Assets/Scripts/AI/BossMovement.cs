@@ -1,10 +1,12 @@
+using System.Diagnostics;
 using System.Threading;
 using UnityEngine;
 
-public class AgentMovement : MonoBehaviour
+
+public class BossMovement : MonoBehaviour
 {
-    public float speed = 4f;
-    public float changeDirectionInterval = 3f;
+    public float speed = 1f;
+    public float changeDirectionInterval = 1f;
 
     private Vector3 targetPosition;
     private float timer;
@@ -27,13 +29,16 @@ public class AgentMovement : MonoBehaviour
 
     void SetNewRandomTarget()
     {
-        float randomX = Random.Range(0f, -4f);
-        float randomY = Random.Range(1f, 5f);
+        float randomX = Random.Range(-11f, -11f);
+        float randomY = Random.Range(2f, 2f);
         float randomZ = Random.Range(-24f, -14f);
         
 
         targetPosition = new Vector3(randomX, randomY, randomZ);
     }
-    
-}
 
+    private string GetDebuggerDisplay()
+    {
+        return ToString();
+    }
+}
